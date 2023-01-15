@@ -45,4 +45,4 @@ const ProductsContextProvider = (props) => {
 }
 
 export default ProductsContextProvider
-// export {Productcontext};
+// export {ProductsContext};
