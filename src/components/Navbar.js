@@ -6,14 +6,15 @@ const Navbar = () => {
         <>
             <nav>
                 <ul className='left'>
-                    <li><Link to="/">Shopify</Link><i class="fa-brands fa-shopify"></i></li>
+                    <li><Link to="/">Shopify</Link><i className="fa-brands fa-shopify"></i></li>
                 </ul>
                 <ul className='right'>
-                    <li><Link to="/cart"> <span className='shoppingCart'><i class="fa-solid fa-cart-plus"></i><span className='cartCount'>0</span></span></Link></li>
+                    <li><Link to="cart"> 
+                    <span className='shoppingCart'><i className="fa-solid fa-cart-plus"></i><span className='cartCount'>0</span></span></Link></li>
                 </ul>
             </nav>
         </>
     )
-}
+} 
   
-export default Navbar
+export default Navbar;

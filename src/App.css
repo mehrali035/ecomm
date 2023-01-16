@@ -177,3 +177,13 @@ margin: 12px 0;
   color: #f4511e;
   transition: 0.9;
 }
+
+.cart-container h2{
+  margin-top: 100px;
+}
+/* not Found  */
+
+.not-found{
+  margin-top: 100px;
+
+}

@@ -4,7 +4,7 @@ const Banner = () => {
     return (
         <>
 
-            <div className="container">
+            
                 <header>
                     <div className="headerText">
                         <div>
@@ -13,8 +13,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </header>
-            </div>
-
+        
         </>
     )
 }
