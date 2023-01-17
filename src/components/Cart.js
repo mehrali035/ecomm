@@ -3,7 +3,7 @@ import { CartContext } from '../Global/CartContext'
 
 const Cart = () => {
   const data = useContext(CartContext);
-  console.log(data); 
+  console.log(data);
   return (
   <>
    <div className="container">

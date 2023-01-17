@@ -1,5 +1,9 @@
+
+
+
+
 export const CartReducer = (state, action) => {
-const {shoppingCart,totalPrice,qty} = state;
+    const { shoppingCart, totalPrice, qty } = state;
 
     let product;
     let index;
@@ -9,18 +13,18 @@ const {shoppingCart,totalPrice,qty} = state;
     switch (action.type) {
 
         case 'ADD_TO_CART':
-            const check = shoppingCart.find(product=> product.id === action.id);
-            if(check){
+            const check = shoppingCart.find(product => product.id === action.id);
+            if (check) {
                 return state;
-            }else{
+            } else {
                 product = action.product;
                 product['qty'] = 1;
                 updatedQty = qty + 1;
                 updatedPrice = totalPrice + product.price;
-                return {shoppingCart: [product, ...shoppingCart],totalPrice: updatedPrice,qty:updatedQty}
+                return { shoppingCart: [product, ...shoppingCart], totalPrice: updatedPrice, qty: updatedQty }
             }
             break;
-            default :
+        default:
             return state;
     }
 

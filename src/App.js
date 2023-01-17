@@ -11,18 +11,18 @@ function App() {
   return (
     <div>
       <ProductsContextProvider>
-      <CartContextProvider>
-
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route exact path="/" element={<Products />} />
-            <Route path="/cart" exact element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Router>
+        <CartContextProvider>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Products />} />
+              <Route path="/cart" exact element={<Cart />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Router>
         </CartContextProvider>
       </ProductsContextProvider>
+      
     </div>
   );
 }
