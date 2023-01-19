@@ -5,7 +5,7 @@ import ProductsContextProvider from './Global/ProductsContext';
 import Products from './components/Products';
 import CartContextProvider from './Global/CartContext';
 import Cart from './components/Cart';
-import NotFound from './components/NotFound';
+import NotFound from './components/NotFound'; 
 
 function App() {
   return (

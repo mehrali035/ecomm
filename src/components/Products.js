@@ -26,7 +26,7 @@ const Products = () => {
                   ${product.price}.00
                 </div>
               </div>
-              <div className="add-to-cart" onClick={({type: 'ADD_TO_CART',id: product.id,product})}>Add-to-Cart</div>
+              <div className="add-to-cart" onClick={()=> dispatch({type: 'ADD_TO_CART',id: product.id,product})}>Add-to-Cart</div>
               {product.status === 'Hot' ? <div className="hot">Hot</div> : ''}
               {product.status === 'New' ? <div className="new">New</div> : ''}
 
