@@ -1,29 +1,24 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../Global/CartContext'
-import CartReducer from '../Global/CartReducer';
-// import StripeCheckout from 'react-stripe-checkout'
-// import axios from 'axios'
+// import CartReducer from '../Global/CartReducer';
+import StripeCheckout from 'react-stripe-checkout'
+import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
-toast.configure();
+// import { toast } from 'react-toastify';
 
-const Cart = (props) => {
+const Cart = () => {
   const { shoppingCart, totalPrice, qty, dispatch } = useContext(CartContext);
-  // const handleToken = async (token) => {
-  //   const product = { name: " All product", price: totalPrice }
-  //   const response = await axios.post('http://localhost:8080/checkout',{
-  //     product,
-  //     token
+  console.log(shoppingCart) 
+  // stipe code start
+  const handleToken = async (token) => {
+    const product = { name: " All product", price: totalPrice }
+    const response = await axios.post('http://localhost:8080/checkout', {
+      product,
+      token
 
-  //   })
-  //  const {status} = response.data;
-  //  if(status === "sucess"){
-  //   dispatch ({type: 'Empty'})
-  //   props.history.push('/');
-  //   toast.success("You have successfully paid!Now continue your shopping",{position: toast.POSITION.TOP_RIGHT});
-  //  }
-  // }
-  // console.log(shoppingCart) 
+    })
+  }
+   // stipe code end
   return (
     <>
       <div className="cart-container">
@@ -56,7 +51,7 @@ const Cart = (props) => {
               <div className="items-price">${totalPrice}.00</div>
             </div>
 
-            {/* <div className="stipe-section">
+            <div className="stipe-section">
               <StripeCheckout
                 stripeKey="pk_test_51MS1JxHyiwS0GVQPjjj6lfFgoC6kacc97anYH4c8kM6HOnodUPisI91GqaPIBMDG5ffexFVv9FyZz9QC096h16gB00EYm9v69V"
                 token={handleToken}
@@ -68,7 +63,7 @@ const Cart = (props) => {
 
               </StripeCheckout>
 
-            </div> */}
+            </div>
           </div>
 
 
